@@ -10,6 +10,11 @@
 !.yarn/releases
 !.yarn/versions
 
+prompt/
+prompt.txt
+CLAUDE.md
+AGENTS.md
+
 # testing
 /coverage
 
