@@ -1,0 +1,11 @@
+[2026-04-28] Implementation request (restructured for clarity)
+
+Goal: Ship a Next.js (App Router) + Tailwind QR generator that outputs PNG.
+
+Requirements:
+- Primary content modes: URL, plain text, Wi‑Fi (SSID/password/security/hidden), and image-related payloads (image URL or small embedded image file as data within QR limits).
+- Separate optional uploads (not part of encoded payload): background image composited behind the QR; center/logo image via qr-code-styling.
+- Client-side only for encoding and decoration; no server-side fetching of user-supplied URLs.
+- Preview and download as PNG (canvas pipeline + optional post-composite for background).
+
+Non-goals: Editing the plan markdown file; SVG as final export.

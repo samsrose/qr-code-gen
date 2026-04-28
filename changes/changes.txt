@@ -1,0 +1,10 @@
+2026-04-28 — Initial implementation (Next.js QR PNG generator)
+
+- Scaffolded Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, ESLint.
+- Added dependency: qr-code-styling (canvas mode, PNG export).
+- Implemented lib/qr-payload.ts: URL/text/Wi‑Fi/image payload helpers and validation caps.
+- Implemented lib/qr-instance.ts: shared QR options (size 512, error correction, styling).
+- Implemented lib/compose-qr-png.ts: composite QR PNG over user background (cover fit); download helper.
+- Implemented components/qr-workspace.tsx: client UI with mode tabs, separate appearance uploads, live preview, Download PNG.
+- Updated app/page.tsx and app/layout.tsx: landing copy and metadata; Geist font on body.
+- Added prompt.txt (restructured prompt log) and this changelog per project convention.
