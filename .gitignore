@@ -11,6 +11,7 @@
 !.yarn/versions
 
 prompt/
+changes/changes.txt
 prompt.txt
 CLAUDE.md
 AGENTS.md
