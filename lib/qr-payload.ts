@@ -74,7 +74,7 @@ export function buildPayload(
         return { data: imageDataUri };
       }
       const data = imageUrl.trim();
-      if (!data) return { data: "", error: "Paste an image URL or upload a small image file." };
+      if (!data) return { data: "", error: "Paste an image URL or upload a ~2KB Image file" };
       const normalized = normalizeUrl(data);
       if (normalized.length > MAX_QR_STRING)
         return { data: "", error: "URL is too long for this QR size." };

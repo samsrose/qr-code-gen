@@ -9,3 +9,10 @@ Requirements:
 - Preview and download as PNG (canvas pipeline + optional post-composite for background).
 
 Non-goals: Editing the plan markdown file; SVG as final export.
+
+[2026-04-29] UI copy tweak (restructured)
+
+Goal: Update image payload helper text for clearer file-size expectation.
+
+Requirement:
+- Rename "Paste an image URL or upload a small image file." to "Paste an image URL or upload a ~2KB Image file"

@@ -8,3 +8,10 @@
 - Implemented components/qr-workspace.tsx: client UI with mode tabs, separate appearance uploads, live preview, Download PNG.
 - Updated app/page.tsx and app/layout.tsx: landing copy and metadata; Geist font on body.
 - Added prompt.txt (restructured prompt log) and this changelog per project convention.
+
+2026-04-29 — Copy update for image payload guidance
+
+- Updated `lib/qr-payload.ts` image-mode empty-input validation message:
+  "Paste an image URL or upload a small image file."
+  -> "Paste an image URL or upload a ~2KB Image file"
+- Logged prompt update in `prompt.txt` per project convention.
