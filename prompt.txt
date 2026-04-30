@@ -16,3 +16,28 @@ Goal: Update image payload helper text for clearer file-size expectation.
 
 Requirement:
 - Rename "Paste an image URL or upload a small image file." to "Paste an image URL or upload a ~2KB Image file"
+
+[2026-04-30] Component decomposition request (restructured)
+
+Goal: Refactor the QR workspace UI into smaller, focused components that are easier to edit and extend without changing behavior.
+
+Requirements:
+- Split `components/qr-workspace.tsx` into dedicated presentational parts for content inputs, appearance settings, and preview/download.
+- Keep QR generation/composition orchestration centralized and strongly typed in the parent workspace component.
+- Preserve existing upload validation, payload handling, preview rendering, and PNG download behavior.
+
+[2026-04-30] System theme-only mode request (restructured)
+
+Goal: Make dark/light mode follow the OS theme automatically without adding any visual toggle.
+
+Requirements:
+- Apply initial theme before paint to avoid flicker.
+- Keep theme synchronized when the system preference changes while the app is open.
+- Ensure Tailwind `dark:` styles and browser color-scheme both track system mode.
+
+[2026-04-30] Hydration warning follow-up (restructured)
+
+Goal: Resolve hydration mismatch noise introduced by intentional pre-hydration theme attribute updates.
+
+Requirement:
+- Mark the root HTML element to suppress expected hydration attribute mismatch warnings from system-theme initialization.

@@ -15,3 +15,25 @@
   "Paste an image URL or upload a small image file."
   -> "Paste an image URL or upload a ~2KB Image file"
 - Logged prompt update in `prompt.txt` per project convention.
+
+2026-04-30 — Refactor qr-workspace into smaller components
+
+- Added `components/qr-workspace/content-section.tsx` for QR content modes and mode-specific form controls.
+- Added `components/qr-workspace/appearance-section.tsx` for decorative upload controls (background/logo).
+- Added `components/qr-workspace/preview-panel.tsx` for preview rendering and download CTA.
+- Updated `components/qr-workspace.tsx` to keep state, validation helpers, QR sync/composition, and delegate UI rendering to the new components.
+- Extracted image-embed upload handling into a dedicated callback for clearer parent orchestration.
+- Logged the refactor request in `prompt.txt` per project convention.
+
+2026-04-30 — System-dependent dark/light mode (no toggle)
+
+- Added `components/system-theme-sync.tsx` to listen for `prefers-color-scheme` changes and keep `<html>` `dark` class, `data-theme`, and `color-scheme` in sync.
+- Updated `app/layout.tsx` with a `beforeInteractive` inline script to set theme at first paint and mounted `SystemThemeSync` for runtime updates.
+- Kept behavior toggle-free: theme is fully driven by OS settings.
+- Logged the prompt in `prompt.txt` per project convention.
+
+2026-04-30 — Hydration warning suppression for theme init
+
+- Updated `app/layout.tsx` to add `suppressHydrationWarning` on the root `<html>` element.
+- This suppresses expected attribute mismatch warnings caused by intentional pre-hydration updates to `data-theme` and `color-scheme`.
+- Logged the follow-up prompt in `prompt.txt` per project convention.
